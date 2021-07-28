@@ -1,0 +1,12 @@
+#include "000_ControlCase.h"
+
+#if WHATEVERYOULIKE
+
+#include <ncurses.h>
+
+int main(void)
+{
+    return 0;
+}
+
+#endif
