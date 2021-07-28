@@ -6,3 +6,6 @@
 
 // 글자 및 font 입히기
 #define _003_CONTROLCHARACTOR 0
+
+// 기본적 Input
+#define _004_BASICINPUT 0
