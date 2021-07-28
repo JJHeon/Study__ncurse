@@ -9,3 +9,6 @@
 
 // 기본적 Input
 #define _004_BASICINPUT 0
+
+// 글자 속성 기본편
+#define _005_BASICATTRIBUTES 0
