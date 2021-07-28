@@ -15,3 +15,6 @@
 
 // 글자 속성 기본편 2
 #define _006_BASICATTRIBUTES2 0
+
+// chgat 사용
+#define _007_CHGAT 0
