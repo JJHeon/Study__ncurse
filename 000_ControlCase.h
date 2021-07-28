@@ -12,3 +12,6 @@
 
 // 글자 속성 기본편
 #define _005_BASICATTRIBUTES 0
+
+// 글자 속성 기본편 2
+#define _006_BASICATTRIBUTES2 0
