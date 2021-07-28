@@ -18,3 +18,6 @@
 
 // chgat 사용
 #define _007_CHGAT 0
+
+// window, border, box 경계면 설명
+#define _008_WINDOW 1
