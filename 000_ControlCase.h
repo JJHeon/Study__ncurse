@@ -20,4 +20,7 @@
 #define _007_CHGAT 0
 
 // window, border, box 경계면 설명
-#define _008_WINDOW 1
+#define _008_WINDOW 0
+
+// line을 지우고 다시 그리지 말고 옮겨서 효율적으로 그려보자
+#define _009_DRAWBORDERLINE 1
