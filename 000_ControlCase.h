@@ -23,4 +23,7 @@
 #define _008_WINDOW 0
 
 // line을 지우고 다시 그리지 말고 옮겨서 효율적으로 그려보자
-#define _009_DRAWBORDERLINE 1
+#define _009_DRAWBORDERLINE 0
+
+//색 표현의 기본
+#define _010_BASICCOLORS 1
