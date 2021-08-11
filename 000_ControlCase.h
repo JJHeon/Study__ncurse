@@ -26,4 +26,7 @@
 #define _009_DRAWBORDERLINE 0
 
 //색 표현의 기본
-#define _010_BASICCOLORS 1
+#define _010_BASICCOLORS 0
+
+//Key 입력 예제
+#define _011_KEYEXAMPLE 1
