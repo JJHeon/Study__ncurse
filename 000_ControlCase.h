@@ -32,4 +32,7 @@
 #define _011_KEYEXAMPLE 0
 
 //복수의 window가 존재할 때, wgetch 입력은 어떻게 처리되는가?
-#define _012_QUESTIONFORWGETCH 1
+#define _012_QUESTIONFORWGETCH 0
+
+//Mouse 사용법 예제, 하지만 현재 상황에서 작동되지 않는다.
+#define _013_MOUSEINPUT 1
