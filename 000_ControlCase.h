@@ -35,4 +35,7 @@
 #define _012_QUESTIONFORWGETCH 0
 
 //Mouse 사용법 예제, 하지만 현재 상황에서 작동되지 않는다.
-#define _013_MOUSEINPUT 1
+#define _013_MOUSEINPUT 0
+
+//확장된 window 사용법, 윈도우 덤프와 화면 덤프, 그리고 현재 커서 위치에 대해
+#define _014_WINDOW2 1
