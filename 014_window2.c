@@ -59,86 +59,95 @@ int main(void) {
     noecho();
     keypad(stdscr, TRUE);
 
-    //21.08.19 문제있음, 네모박스가 안보임
-    //네모를 출력하고 while 을 넘어간 순간 화면전환을 해버리는데, 화면전환을 누가하는지?
+    /** 21.08.19 문제있음, 네모박스가 안보임 
+     *  네모를 출력하고 while 을 넘어간 순간 화면전환을 해버리는데, 화면전환을 누가하는지?
+     *  21.08.23 refresh()가 화면을 바꿔버림.
+     * / 
+    //
+    
     init_motion(&user_move);
     screen[0] = create_newwin(screen1_sizey, screen1_sizex, screen1_starty, screen1_startx);
     screen[1] = create_newwin(screen2_sizey, screen2_sizex, screen2_starty, screen2_startx);
     max_x = getmaxx(stdscr);
     max_y = getmaxy(stdscr);
 
-    while ((ch = getch()) != KEY_F(1)) {
-        switch (ch) {
-            case KEY_LEFT:
-                if (user_move.user_curser_x > 0) {
-                    mvprintw(user_move.user_curser_y, user_move.user_curser_x--, " ");
+    sleep(1);
+    //wgetch(screen[0]->screen);
+    //wgetch(stdscr);
+    refresh();
+    sleep(2);
+    // while ((ch = getch()) != KEY_F(1)) {
+    //     switch (ch) {
+    //         case KEY_LEFT:
+    //             if (user_move.user_curser_x > 0) {
+    //                 mvprintw(user_move.user_curser_y, user_move.user_curser_x--, " ");
 
-                    if (user_move.selected_screen) {
-                        WIN temp = *(user_move.selected_screen);
+    //                 if (user_move.selected_screen) {
+    //                     WIN temp = *(user_move.selected_screen);
 
-                        delete_win(user_move.selected_screen);
-                        user_move.selected_screen = create_newwin(temp.height, temp.width, temp.starty, --temp.startx);
-                    }
-                }
+    //                     delete_win(user_move.selected_screen);
+    //                     user_move.selected_screen = create_newwin(temp.height, temp.width, temp.starty, --temp.startx);
+    //                 }
+    //             }
 
-                break;
-            case KEY_RIGHT:
-                if (user_move.user_curser_x < max_x) {
-                    mvprintw(user_move.user_curser_y, user_move.user_curser_x++, " ");
+    //             break;
+    //         case KEY_RIGHT:
+    //             if (user_move.user_curser_x < max_x) {
+    //                 mvprintw(user_move.user_curser_y, user_move.user_curser_x++, " ");
 
-                    if (user_move.selected_screen) {
-                        WIN temp = *(user_move.selected_screen);
+    //                 if (user_move.selected_screen) {
+    //                     WIN temp = *(user_move.selected_screen);
 
-                        delete_win(user_move.selected_screen);
-                        user_move.selected_screen = create_newwin(temp.height, temp.width, temp.starty, ++temp.startx);
-                    }
-                }
-                break;
-            case KEY_UP:
-                if (user_move.user_curser_y > 0) {
-                    mvprintw(user_move.user_curser_y--, user_move.user_curser_x, " ");
+    //                     delete_win(user_move.selected_screen);
+    //                     user_move.selected_screen = create_newwin(temp.height, temp.width, temp.starty, ++temp.startx);
+    //                 }
+    //             }
+    //             break;
+    //         case KEY_UP:
+    //             if (user_move.user_curser_y > 0) {
+    //                 mvprintw(user_move.user_curser_y--, user_move.user_curser_x, " ");
 
-                    if (user_move.selected_screen) {
-                        WIN temp = *(user_move.selected_screen);
+    //                 if (user_move.selected_screen) {
+    //                     WIN temp = *(user_move.selected_screen);
 
-                        delete_win(user_move.selected_screen);
-                        user_move.selected_screen = create_newwin(temp.height, temp.width, --temp.starty, temp.startx);
-                    }
-                }
-                break;
-            case KEY_DOWN:
-                if (user_move.user_curser_y < max_y) {
-                    mvprintw(user_move.user_curser_y++, user_move.user_curser_x, " ");
+    //                     delete_win(user_move.selected_screen);
+    //                     user_move.selected_screen = create_newwin(temp.height, temp.width, --temp.starty, temp.startx);
+    //                 }
+    //             }
+    //             break;
+    //         case KEY_DOWN:
+    //             if (user_move.user_curser_y < max_y) {
+    //                 mvprintw(user_move.user_curser_y++, user_move.user_curser_x, " ");
 
-                    if (user_move.selected_screen) {
-                        WIN temp = *(user_move.selected_screen);
+    //                 if (user_move.selected_screen) {
+    //                     WIN temp = *(user_move.selected_screen);
 
-                        delete_win(user_move.selected_screen);
-                        user_move.selected_screen = create_newwin(temp.height, temp.width, ++temp.starty, temp.startx);
-                    }
-                }
-                break;
-            case KEY_ENTER:
+    //                     delete_win(user_move.selected_screen);
+    //                     user_move.selected_screen = create_newwin(temp.height, temp.width, ++temp.starty, temp.startx);
+    //                 }
+    //             }
+    //             break;
+    //         case KEY_ENTER:
 
-                if (!user_move.selected_screen) {
-                    for (int i = 0; i < CURRENT_SCREEN_NUM; i++)
-                        if (check_in_user_curser(&screen[i], user_move.user_curser_y, user_move.user_curser_x)) {
-                            user_move.selected_screen = &screen[i];
-                            break;
-                        }
-                } else
-                    user_move.selected_screen = NULL;
+    //             if (!user_move.selected_screen) {
+    //                 for (int i = 0; i < CURRENT_SCREEN_NUM; i++)
+    //                     if (check_in_user_curser(&screen[i], user_move.user_curser_y, user_move.user_curser_x)) {
+    //                         user_move.selected_screen = &screen[i];
+    //                         break;
+    //                     }
+    //             } else
+    //                 user_move.selected_screen = NULL;
 
-                break;
-            default:
-                break;
-        }
-        mvprintw(user_move.user_curser_y, user_move.user_curser_x, "$");
-        mvprintw(0, 0, "MAX Y : %3d, MAX X : %3d | User curser Y : %3d, X : %3d", max_y, max_x, user_move.user_curser_y, user_move.user_curser_x);
-        getyx(stdscr, real_y, real_x);
-        mvprintw(1, 0, "Get Y : %3d, Get X : %3d", real_y, real_x);
-        refresh();
-    }
+    //             break;
+    //         default:
+    //             break;
+    //     }
+    //     mvprintw(user_move.user_curser_y, user_move.user_curser_x, "$");
+    //     mvprintw(0, 0, "MAX Y : %3d, MAX X : %3d | User curser Y : %3d, X : %3d", max_y, max_x, user_move.user_curser_y, user_move.user_curser_x);
+    //     getyx(stdscr, real_y, real_x);
+    //     mvprintw(1, 0, "Get Y : %3d, Get X : %3d", real_y, real_x);
+    //     refresh();
+    // }
 
     delete_win(screen[0]);
     delete_win(screen[1]);
