@@ -38,10 +38,13 @@
 #define _013_MOUSEINPUT 0
 
 //확장된 window 사용법, 윈도우 덤프와 화면 덤프, 그리고 현재 커서 위치에 대해
-#define _014_WINDOW2 1
+#define _014_WINDOW2 0
 
 //14번에 대한 refresh 문제의 테스트
 #define _015_TESTFORREFRESH 0
 
 //14번에서 지적된 KEY_ENTER 작동안함을 해결하기 위한 각 key values 테스트
 #define _016_TESTKEYVALUES 0
+
+//Dump function에 대해
+#define _017_DUMPSCR 1
