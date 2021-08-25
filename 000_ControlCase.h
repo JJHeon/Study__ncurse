@@ -47,4 +47,7 @@
 #define _016_TESTKEYVALUES 0
 
 //Dump function에 대해
-#define _017_DUMPSCR 1
+#define _017_DUMPSCR 0
+
+//Dump window에 대해
+#define _018_DUMPWIN 1
