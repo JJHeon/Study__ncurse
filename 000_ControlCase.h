@@ -62,4 +62,7 @@
 #define _021_PANELBASIC 0
 
 //Panel 기본 사용법 예제 2
-#define _022_PANELBASIC2 1
+#define _022_PANELBASIC2 0
+
+//Panel Hide 사용법 예제
+#define _023_PANELHIDE 1
