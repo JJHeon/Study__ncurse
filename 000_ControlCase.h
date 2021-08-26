@@ -50,4 +50,7 @@
 #define _017_DUMPSCR 0
 
 //Dump window에 대해
-#define _018_DUMPWIN 1
+#define _018_DUMPWIN 0
+
+//일시적으로 curses모드 나가는 예제
+#define _019_LEAVECURSESMODE 1
