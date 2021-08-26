@@ -10,7 +10,8 @@
                 "-o",
                 "Test",
                 "-lncurses",
-                "-lpanel"
+                "-lpanel",
+                "-lmenu"
             ],
             "options": {
                 "cwd": "${fileDirname}"
