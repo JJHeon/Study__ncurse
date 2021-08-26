@@ -56,4 +56,4 @@
 #define _019_LEAVECURSESMODE 0
 
 //확장 캐릭터 문자셋 출력 예제
-#define _020_CHARACTERSETEXAMPLE 1
+#define _020_CHARACTERSETEXAMPLE 0
