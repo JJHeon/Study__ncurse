@@ -57,3 +57,9 @@
 
 //확장 캐릭터 문자셋 출력 예제
 #define _020_CHARACTERSETEXAMPLE 0
+
+//Panel 기본 사용법 예제
+#define _021_PANELBASIC 0
+
+//Panel 기본 사용법 예제 2
+#define _022_PANELBASIC2 1
