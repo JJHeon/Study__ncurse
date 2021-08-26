@@ -65,4 +65,7 @@
 #define _022_PANELBASIC2 0
 
 //Panel Hide 사용법 예제
-#define _023_PANELHIDE 1
+#define _023_PANELHIDE 0
+
+//Menu 라이브러리 기본 사용법 예제
+#define _024_MENUBASIC 1
