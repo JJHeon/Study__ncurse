@@ -53,4 +53,7 @@
 #define _018_DUMPWIN 0
 
 //일시적으로 curses모드 나가는 예제
-#define _019_LEAVECURSESMODE 1
+#define _019_LEAVECURSESMODE 0
+
+//확장 캐릭터 문자셋 출력 예제
+#define _020_CHARACTERSETEXAMPLE 1
