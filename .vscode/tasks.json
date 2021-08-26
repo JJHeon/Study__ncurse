@@ -9,7 +9,8 @@
                 "${file}",
                 "-o",
                 "Test",
-                "-lncurses"
+                "-lncurses",
+                "-lpanel"
             ],
             "options": {
                 "cwd": "${fileDirname}"
