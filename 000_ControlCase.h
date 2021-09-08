@@ -71,4 +71,7 @@
 #define _024_MENUBASIC 0
 
 //Menu 라이브러리 기본 사용법 예제 2
-#define _025_MENUBASIC2 1
+#define _025_MENUBASIC2 0
+
+//Menu scroll 예제 
+#define _026_SCRCROLLMENU 1
