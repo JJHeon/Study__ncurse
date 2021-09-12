@@ -74,4 +74,7 @@
 #define _025_MENUBASIC2 0
 
 //Menu scroll 예제 
-#define _026_SCRCROLLMENU 1
+#define _026_SCRCROLLMENU 0
+
+//Menu scroll 예제 
+#define _027_SCRCROLLMENU2 1
