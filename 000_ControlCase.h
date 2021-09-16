@@ -80,4 +80,7 @@
 #define _027_SCRCROLLMENU2 0
 
 //Menu Option 예제, 메뉴 아이템들의 표현속성 변경
-#define _028_MENUOPTION 1
+#define _028_MENUOPTION 0
+
+//Form 기본 사용법 예제
+#define _029_FORMBASIC 1
