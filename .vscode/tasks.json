@@ -11,7 +11,8 @@
                 "Test",
                 "-lncurses",
                 "-lpanel",
-                "-lmenu"
+                "-lmenu",
+                "-lform"
             ],
             "options": {
                 "cwd": "${fileDirname}"
