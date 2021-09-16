@@ -77,4 +77,7 @@
 #define _026_SCRCROLLMENU 0
 
 //Menu scroll 예제 
-#define _027_SCRCROLLMENU2 1
+#define _027_SCRCROLLMENU2 0
+
+//Menu Option 예제, 메뉴 아이템들의 표현속성 변경
+#define _028_MENUOPTION 1
