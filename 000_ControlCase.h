@@ -73,14 +73,17 @@
 //Menu 라이브러리 기본 사용법 예제 2
 #define _025_MENUBASIC2 0
 
-//Menu scroll 예제 
+//Menu scroll 예제
 #define _026_SCRCROLLMENU 0
 
-//Menu scroll 예제 
+//Menu scroll 예제
 #define _027_SCRCROLLMENU2 0
 
 //Menu Option 예제, 메뉴 아이템들의 표현속성 변경
 #define _028_MENUOPTION 0
 
 //Form 기본 사용법 예제
-#define _029_FORMBASIC 1
+#define _029_FORMBASIC 0
+
+//Termianl Resize가 가능한지? -> no
+#define _030_RESIZETERMINAL 1
