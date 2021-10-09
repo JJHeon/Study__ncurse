@@ -86,4 +86,7 @@
 #define _029_FORMBASIC 0
 
 //Termianl Resize가 가능한지? -> no
-#define _030_RESIZETERMINAL 1
+#define _030_RESIZETERMINAL 0
+
+//Termianl Resize 2번째 시도. -> 실패
+#define _031_RESIZETERMINAL2 1
